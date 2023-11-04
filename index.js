@@ -8,7 +8,7 @@ const invokeAction = async({ action, id, name, email, phone }) => {
     switch (action) {
         case 'list':
             const allContacts = await contactService.listContacts();
-            console.log(allContacts);
+            console.table(allContacts);
             break;
 
         case 'get':
